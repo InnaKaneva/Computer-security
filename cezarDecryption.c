@@ -38,12 +38,12 @@ int main()
     FILE *fileptr=fopen("cipher.txt","r");
     char text[MAXN];
     fgets(text, sizeof(text), fileptr);
-    printf("The encrypted message is: %s",text);
+    printf("Encrypted message: %s",text);
     int key;
-    printf("Enter a key: ");
+    printf("Key: ");
     scanf("%d", &key);
     char* cipher=cezar_cipher(text, key);
-    printf("The decrypted message is: %s", cipher);
+    printf("Decrypted message: %s", cipher);
 
     fclose(fileptr);
     free(cipher);
