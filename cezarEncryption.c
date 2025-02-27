@@ -35,13 +35,13 @@ char* cezar_cipher(char* text, int key)
 int main()
 {
     char text[MAXN];
-    printf("Enter a message: ");
+    printf("Message: ");
     fgets(text, sizeof(text), stdin);
     int key;
-    printf("Enter a key: ");
+    printf("Key: ");
     scanf("%d", &key);
     char* cipher=cezar_cipher(text, key);
-    printf("The encrypted message is: %s", cipher);
+    printf("Encrypted message: %s", cipher);
 
     FILE *fileptr=fopen("cipher.txt","w");
     fprintf(fileptr,cipher);
