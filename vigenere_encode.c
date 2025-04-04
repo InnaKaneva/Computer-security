@@ -4,7 +4,7 @@
 #include<ctype.h>
 #define MAXN 1024
 
-char* vigenere_encrypt(char* plaintext,char* key)
+char* vigenere_encode(char* plaintext,char* key)
 {
     int text_length=strlen(plaintext);
     int key_length=strlen(key);
@@ -64,7 +64,7 @@ int main()
     read_file("vigenereKey.txt",key);
     printf("The key is: %s\n",key);
 
-    char* cipher=vigenere_encrypt(plaintext,key);
+    char* cipher=vigenere_encode(plaintext,key);
     printf("%s",cipher);
     write_file("vigenereCipher.txt",cipher);
 
